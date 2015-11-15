@@ -13,32 +13,59 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+        background-color: #FBFBFB;
       }
-      img{
+      .coverimage{
+        height: 400px;
+        width: 100%;
+        position: relative;
+      }
+      .avatar{
         border-radius: 75%;
-        border: solid 1px black;
+        border: solid 1px white;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
         height:200px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: -110px;
       }
       h1 {
+        margin-top: 110px;
         font-family: Helvetica, sans-serif;
+        color: #484C4F;
       }
       h2 {
         font-family: Helvetica, sans-serif;
+        color: #484C4F;
+      }
+      p{
+        text-align: center;
+        color: #888C90;
+        max-width: 720px;
+        margin-left:auto;
+        margin-right: auto;
+        width:50%;
       }
       ul{
         padding: 0;
       }
+      main{
+        background-color: white;
+        padding-bottom: 30px;
+        border-left: 1px solid #EAEAEA;
+        border-right:1px solid #EAEAEA;
+        border-bottom: 1px solid #EAEAEA;
+        }
   </style>
 </head>
 
 <body>
+  <main>
+  <img class="coverimage"src="images/cover_photo.jpg"/>
+  <img class="avatar"src="images/9k.jpg" alt="guillermo enjoying a giant brew"/>
   <h1> Guillermo Mont </h1>
-  <img src="images/9k" alt="guillermo enjoying a giant brew"/>
-
   <p>
     I'm a product designer and illustrator at <a href="http://guidebook.com">Guidebook.</a>
-  </p>
-  <p>
     Enjoy movies, games, the occasional comic book, and pasisng time with good company.
   </p>
 
@@ -48,6 +75,6 @@
   <ul>
   <a href="homework.html"> Homework Week 1</a>
   </ul>
-
+  </main>
 </body>
 </html>
