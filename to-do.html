@@ -1,0 +1,18 @@
+<ul>
+</ul>
+
+<script>
+function creatlistitem(anything) {
+
+
+  //create a new <li>
+  var newlist = document.createElement("li");
+  //set its textconent to whatever you want
+  newlist.textContent = anything;
+  //get the <ul>
+  var parent = document.querySelector("ul");
+  //append the new <li> to it
+  parent.appendChild(newlist);
+}
+creatlistitem("hello");
+</script>
