@@ -107,25 +107,43 @@
       var link = document.querySelector(".like-link");
       var form = document.querySelector("#new-comment");
 
+      //grab the input id
+      var newComment = document.querySelector("#new-comment-body");
+
+      //create a var that is going to be our new text cotent that we will place in the input
+      var newCommentText=document.querySelector("#newCommentText");
+
+      //grab the id where the newCommentText shall appear, it's in the DOM
+      var comments = document.querySelector("#comments");
+
       link.addEventListener("click", like);
       form.addEventListener("submit", comment);
 
+
       function like(event) {
         event.preventDefault();
-
-        var span = document.querySelector(".like-link");
-        // var count = span.textContent;
+        //grabbing the span
+        var span = document.querySelector(".like-count");
+        //taking the span content and making it a number
         var count = parseInt(span.textContent);
-        count = parseInt(count);
+        //adding (1) to the content
         count = count+1;
+        //and then tellin the span text that it's now the new count (incremented by one)
         span.textContent = count;
-        // Your code for like goes here
       }
 
       function comment(event) {
         event.preventDefault();
+        //create a div for the new content
+        var newCommentText = document.createElement("div");
+        //make the new content div a class, say that belongs to newCommentText
+        newCommentText.setAttribute("class","newCommentText");
+        //we are saying the newly created text is the content in NewComment
+        newCommentText.textContent = newComment.value;
+        //place the newCommentText in the DOM by appending it to the comments ID
+        comments.appendChild(newCommentText);
+        form.reset();
 
-        // Your code for comments goes here
       }
     </script>
   </body>
