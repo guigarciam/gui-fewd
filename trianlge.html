@@ -1,0 +1,39 @@
+<div class="wordbubble">
+  <p>
+    Hello world!
+  </p>
+</div>
+
+<!-- <div class ="triangle">
+</div> -->
+
+
+<style>
+.wordbubble{
+  color: white;
+  width: 600px;
+  height: 200px;
+  padding-left: 20px;
+  background-color: blue;
+  border:5px solid blue;
+  border-radius: 10px;
+  position: relative;
+}
+
+.wordbubble::after{
+  content: "";
+  position: absolute;
+  bottom: -105px;
+  left:10%;
+  width: 0px;
+  height: 0px;
+  background-color: transparent;
+  border: 50px solid blue;
+  border-top-color: blue;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-width: 0px;
+  border-left-width: 80px;
+}
+</style>

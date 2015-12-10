@@ -1,0 +1,105 @@
+
+<button class="stopBtn" data-lightbulbClassName='red' data-lightbulbID='top'>
+  Stop
+</button>
+<button class="slowBtn" data-lightbulbClassName='yellow' data-lightbulbID='middle'>
+  Slow
+</button>
+<button class="goBtn" data-lightbulbClassName='green' data-lightbulbID='bottom'>
+  Go
+</button>
+<!-- <button class="cautionBtn">
+  Cauton
+</button> -->
+<div class="mainContainer">
+    <div class="light" id='top'>
+      </div>
+    <div class="light" id='middle'>
+      </div>
+    <div class="light" id='bottom'>
+      </div>
+</div>
+
+<style>
+.stopbtn {
+  border-radius: 5px;
+  background-color: red;
+  text-decoration: none;
+  font-weight: "arial",sans-serif;
+  font-size: 18px;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+  }
+.gobtn {
+  border-radius: 5px;
+  background-color: green;
+  text-decoration: none;
+  font-weight: "arial",sans-serif;
+  font-size: 18px;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+}
+.slowbtn {
+  border-radius: 5px;
+  background-color: yellow;
+  text-decoration: none;
+  font-weight: "arial",sans-serif;
+  font-size: 18px;
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+}
+.mainContainer{
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom:40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellow;
+  margin-top: 40px;
+  border: solid yellow 2px;
+  border-radius: 20px;
+}
+
+.light {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 100px;
+  margin-top: 20px;
+  height: 100px;
+  background-color: white;
+  border-radius: 100%;
+}
+.red{
+  background-color: red;
+
+}
+.yellow{
+  background-color: yellow;
+}
+.green{
+  background-color: green;
+}
+</style>
+<script>
+var stopbtn = document.querySelector(".stopbtn");
+var slowbtn = document.querySelector(".slowbtn");
+var gobtn = document.querySelector(".gobtn");
+
+stopbtn.addEventListener("click", test);
+slowbtn.addEventListener("click", test);
+gobtn.addEventListener("click",test);
+
+function test(event){
+  var lightbulbClassName = event.target.getAttribute('data-lightbulbClassName');
+  var lightbulbID = event.target.getAttribute('data-lightbulbID');
+  var selectedLightBulb = document.getElementById(lightbulbID);
+  selectedLightBulb.className += ' ' + lightbulbClassName;
+}
+</script>

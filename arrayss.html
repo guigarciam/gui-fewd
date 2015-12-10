@@ -1,0 +1,63 @@
+
+<!-- saved from url=(0057)http://avandamiri.com/fewd-37/week-6/examples/arrays.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head><body><p>
+  There are <span id="count">0</span> students in the class:
+</p>
+
+<ol>
+</ol>
+
+<script>
+var students = [
+  "Allison",
+  "Amanda",
+  "Angela",
+  "Bora",
+  "Brad",
+  "Cack",
+  "David",
+  "David",
+  "Denise",
+  "Diana",
+  "Emily",
+  "Eric",
+  "Fernando",
+  "Gina",
+  "Guillermo",
+  "Jake",
+  "JC",
+  "Jessica",
+  "Kathryn",
+  "Kuulei",
+  "Laci",
+  "Lila",
+  "Lindsey",
+  "Madison",
+  "Megan",
+  "My",
+  "Nicholas",
+  "Oleg",
+  "Pegah",
+  "Ryan",
+  "Serge",
+  "Yiqian"
+];
+</script>
+
+<script>
+var count = document.querySelector("#count");
+
+for( var i = 0; i< students.length; i++){
+
+  var list = document.querySelector("ol");
+  var content = document.createElement("li");
+  list.appendChild(content);
+  content.textContent = students[i];
+  count.textContent = students.length;
+
+}
+// Your code goes here:
+// 1. Add each student to the main <ol>
+// 2. Change the 0 to reflect the number of students in the array
+</script>
+<div id="window-resizer-tooltip" style="display: block;"><a href="http://avandamiri.com/fewd-37/week-6/examples/arrays.html#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">873</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">757</span></div></body></html>

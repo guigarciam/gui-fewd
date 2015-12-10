@@ -136,9 +136,9 @@
         event.preventDefault();
         //create a div for the new content
         var newCommentText = document.createElement("div");
-        //make the new content div a class, say that belongs to newCommentText
+        //switch the div to the newCommentText class
         newCommentText.setAttribute("class","newCommentText");
-        //we are saying the newly created text is the content in NewComment
+        //givethenewly made class the value of newcomment
         newCommentText.textContent = newComment.value;
         //place the newCommentText in the DOM by appending it to the comments ID
         comments.appendChild(newCommentText);
