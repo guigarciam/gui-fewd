@@ -1,5 +1,50 @@
-<script type="text/javascript" src="sprinkles-1.4.0.min.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Achievement</title>
+    <style>
+      body{
+        margin-top: 20%;
+        font-family: Avenir, Serif;
+        font-size: 18px;
+        text-align: center;
+        max-width:960px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FBFBFB;
+      }
+      .container{
+        background-color: #ffffff;
+        padding: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60%;
+        border-radius: 20px;
+      }
 
-<script>
-  document.write(window.location.$getParam("text"))
-</script>
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+    </div>
+
+    <script type="text/javascript" src="sprinkles-1.4.0.min.js"></script>
+
+  <script>
+      var content=document.write(window.location.$getParam("text"));
+
+      var displaycontent=document.createElement("p");
+      var container=document.querySelector(".container");
+      container.appendChild(displaycontent);
+      // document.write(window.location.$getParam("icon"));
+      // function(){
+      //   content.textContent.appendtoChild
+      // }
+    </script>
+    <script>
+      var=document.querySelector(body);
+  </body>
+</html>
