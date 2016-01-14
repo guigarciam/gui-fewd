@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+<form action="present.html">
+  <input type="text" name="text" value="">
+
+  <label>
+    <input type="radio" name="icon" value="trophy"> 🏆
+  </label>
+
+  <label>
+    <input type="radio" name="icon" value="poop"> 💩
+  </label>
+
+  <input type="submit" name="name" value="Submit">
+</form>
+
+<script>
+// When form is submitted...
+var taunt = {
+  text: "hello",
+  icon: "trophy"
+}
+
+firebase.push(taunt);
+</script>

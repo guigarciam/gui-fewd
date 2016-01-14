@@ -1,0 +1,16 @@
+<script>
+
+  var locate = window.location
+  document.tutorial.value = locate
+
+  var text = document.tutorial.value
+
+  function delineate(str)
+  {
+  theleft = str.indexOf("=") + 1;
+  theright = str.lastIndexOf("&");
+  return(str.substring(theleft, theright));
+  }
+  document.write("achievement is " +delineate(text));
+
+</SCRIPT>

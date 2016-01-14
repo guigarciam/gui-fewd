@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+  </head>
+  <body>
+
+<style media="screen">
+  body{
+    margin: 0px;
+    background-color: #eaf5fe;
+  }
+  .bottomInput{
+      background-color: #676b6f;
+      position: absolute;
+      bottom: 0;
+      display: inline;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      width: 100%;
+      margin: auto;
+    }
+  button {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom-width: 2px;
+      border-radius: 5px; font-size: inherit;
+      color: white;
+      background-color: #049cd8;
+      padding: .5em 1em;
+      cursor: pointer;
+      width: 10%;
+    }
+  input{
+    margin: 10px;
+    margin-left: 10%;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-width: 2px;
+    border-radius: 5px; font-size: inherit;
+    color: #565656;
+    width: 70%;
+  }
+  .messages{
+    padding: 20px
+    margin:0;
+    list-style: none;
+  }
+.no-messages{
+    padding-top: 20%;
+    text-align: center;
+    color: #b8c2ca;
+    font-family: helvetica;
+    font-size: 22px;
+  }
+</style>
+
+<div class="container">
+    <ul class="messages">
+      </ul>
+      <div class="no-messages">
+        no messages
+      </div>
+  </div>
+<div class="bottomInput">
+<form>
+  <input type="text">
+  <button type="submit">send</button>
+</form>
+</div>
+
+
+
+
+<!-- <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"><script> -->
+    <script type="text/javascript">
+    // Connect to the Firebase DB
+// var firebase = new Firebase("https://blinding-inferno-7422.firebaseio.com"); -->
+var button = document.querySelector("button");
+  button.addEventListener("click", function() { alert("alert");});
+
+    // var newMessage = document.createElement("li")
+    // newMessage.textContent = "something"
+    // document.querySelector('.messages').appendChild(newMessage);
+
+    </script>
+  </body>
+</html>
