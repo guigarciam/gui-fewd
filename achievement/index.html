@@ -144,7 +144,7 @@
       var url = "https://github.com/guigarciam/gui-fewd/achievement/present.html?text="+text+"&icon="+icon;
       // Build the AJAX request
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url));
+      xhr.open("GET", "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url));
 
       // Setup a response handler for success by updating a label, otherwise log an error
       xhr.onreadystatechange = function() {
