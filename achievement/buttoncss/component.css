@@ -294,7 +294,7 @@
 
 /* Button 2a */
 .btn-2a {
-	border-radius: 0 0 5px 5px;
+	border-radius: 0 0 2px 2px;
 }
 
 .btn-2a:hover {
@@ -309,7 +309,7 @@
 
 /* Button 2b */
 .btn-2b {
-	border-radius: 0 0 5px 5px;
+	border-radius: 0 0 2px 2px;
 }
 
 .btn-2b:hover {
@@ -324,7 +324,7 @@
 
 /* Button 2c */
 .btn-2c {
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 .btn-2c:hover {
@@ -339,7 +339,7 @@
 
 /* Button 2d */
 .btn-2d {
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 .btn-2d:hover {
@@ -354,7 +354,7 @@
 
 /* Button 2e */
 .btn-2e {
-	border-radius: 5px;
+	border-radius: 2px;
 	box-shadow: -6px 0 #c45f5f;
 }
 
@@ -370,7 +370,7 @@
 
 /* Button 2f */
 .btn-2f {
-	border-radius: 5px;
+	border-radius: 2px;
 	box-shadow: 6px 0 #c45f5f;
 }
 
@@ -386,7 +386,7 @@
 
 /* Button 2g */
 .btn-2g {
-	border-radius: 40px;
+	border-radius: 5px;
 }
 
 .btn-2g:hover {
@@ -401,7 +401,7 @@
 
 /* Button 2h */
 .btn-2h {
-	border-radius: 20px;
+	border-radius: 5px;
 }
 
 .btn-2h:hover {
