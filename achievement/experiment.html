@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script language="javascript">
+    function Submit() {
+    // Get the input
+    var text = document.getElementById("text").value;
+    var icon = document.getElementById("icon").value;
+    var url = ""
+    // Build the AJAX request
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + url);
+
+// Setup a response handler for success by updating a label, otherwise log an error
+xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4) {
+        if(xhr.status==200) {
+            document.getElementById("out").textContent=JSON.parse(xhr.responseText).tinyurl;
+        }
+    }
+}
+
+xhr.send();
+return false;
+}
+    </script>
+  </head>
+  <body>
+  <form onsubmit="Submit()">
+  <input type="text" id="in"/>
+  <input type="submit"/>
+  </form>
+  <span id="out"></span>
+  </body>
+</html>

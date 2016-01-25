@@ -4,47 +4,108 @@
     <meta charset="utf-8">
     <title>Your Achievement</title>
     <style>
+      @import url(https://fonts.googleapis.com/css?family=Nunito);
+      div{
+        border: solid 0px;
+      }
       body{
+        padding: 0px;
         margin-top: 20%;
-        font-family: Avenir, Serif;
-        font-size: 18px;
-        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1em;
+        color: #eee;
         max-width:960px;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         background-color: #FBFBFB;
       }
-      .container{
-        background-color: #ffffff;
-        padding: 40px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 60%;
-        border-radius: 20px;
+      .unlocked{
+        font-weight: bold;
+        margin-left: 5.5em;
+        width: 70%;
+      }
+      .your-achievement-text{
+        width: 70%;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        margin-left: 5.5em;
+        line-height: 1.4em;
+      }
+      .trophy{
+        position: absolute;
+        left: 1em;
+        top: .8em;
+        background-image:url(images/trophy.svg);
+        height: 4em;
+        width: 4em;
       }
 
+      .thumbsup{
+        position: absolute;
+        left: 1em;
+        top: .5em;
+        background-image:url(images/thumbsup.svg);
+        height: 4em;
+        width: 4em;
+      }
+      .container{
+        position: relative;
+        background-color: #2d2727;
+        padding: .5em;
+        min-height: 4.5em;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        border-radius: 5em;
+        border: 2px solid #a09c99;
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
+      <div class="unlocked">Achievement Unlocked!</div>
     </div>
 
     <script type="text/javascript" src="sprinkles-1.4.0.min.js"></script>
 
   <script>
-      var content=document.write(window.location.$getParam("text"));
+      // prepare data
+      var outputText = window.location.$getParam("text").replace(/\+/g, " ");
+      var icon = window.location.$getParam("icon");
+      var iconOutput = null;
 
-      var displaycontent=document.createElement("p");
-      var container=document.querySelector(".container");
-      container.appendChild(displaycontent);
-      // document.write(window.location.$getParam("icon"));
-      // function(){
-      //   content.textContent.appendtoChild
-      // }
+
+
+      console.log(icon);
+
+      // prepare the DOM elements
+      var containerNode = document.querySelector(".container");
+      var textNode = document.createTextNode(outputText);
+      var iconNode = document.createElement("div");
+      var pcontspan = document.createElement("div");
+      var pTagNode = document.createElement("span");
+
+      // var iconPTagNode = document.createElement("span");
+
+      if (icon==="trophy") {
+        iconNode.className="trophy";
+
+      } else if (icon==="thumbsup") {
+        iconNode.className="thumbsup";
+      } else {
+        iconNode.className="trophy";
+      }
+
+      pTagNode.appendChild(textNode);
+      // iconPTagNode.appendChild(iconNode);
+      containerNode.appendChild(iconNode);
+      containerNode.appendChild(pcontspan);
+      pcontspan.appendChild(pTagNode);
+      pcontspan.className="your-achievement-text";
+
+
     </script>
-    <script>
-      var=document.querySelector(body);
   </body>
 </html>
