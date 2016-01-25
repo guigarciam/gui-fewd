@@ -138,7 +138,6 @@
     </style>
     <script language="javascript">
     function submit() {
-alert("eat shit");
     // Get the input
       var text = document.getElementById("text").value;
       var icon = document.getElementById("icon").value;
@@ -154,13 +153,10 @@ alert("eat shit");
             alert("setting");
             document.getElementById("outputin").textContent = JSON.parse(xhr.responseText).tinyurl;
           } else {
-            alert("Sack of cum");
           }
         }
       }
-
       xhr.send();
-      alert("eat shit2");
       return false;
     }
     </script>
