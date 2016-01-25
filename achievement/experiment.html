@@ -1,34 +1,19 @@
 <html>
-  <head>
-    <script language="javascript">
-    function Submit() {
-    // Get the input
-    var text = document.getElementById("text").value;
-    var icon = document.getElementById("icon").value;
-    var url = "https://github.com/guigarciam/gui-fewd/achievement/present.html?text="+encodeURI(text)+"&icon="+encodeURI(icon);
-    // Build the AJAX request
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + url);
 
-// Setup a response handler for success by updating a label, otherwise log an error
-xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4) {
-        if(xhr.status==200) {
-            document.getElementById("outputin").textContent=JSON.parse(xhr.responseText).tinyurl;
-        }
-    }
-}
+    <head>
+        <script>
+            function upload() {
+            console.log('ok')
+                alert("I am an alert box!");
+            }
+        </script>
+    </head>
 
-xhr.send();
-return false;
-}
-    </script>
-  </head>
-  <body>
-  <form onsubmit="Submit(); return false;">
-  <input type="text" id="in"/>
-  <input type="submit"/>
-  </form>
-  <span id="out"></span>
-  </body>
+    <body>
+        <form enctype="multipart/form-data" method="post" onsubmit="return upload();">
+            <input type="file" name="file">
+            <input type="submit" name="upload2" value="Datei hochladen">
+        </form>
+    </body>
+
 </html>
