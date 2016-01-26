@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Achievement</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+      @import url(buttoncss/component.css);
+      @import url(https://fonts.googleapis.com/css?family=Nunito);
+      *:focus { outline: none;}
+
+      .logo {
+        display: block;
+        repeat: none;
+        text-indent: -9999px;
+        width: 220px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        background: url(images/achievement_unlocked.svg);
+      }
+      .container {
+          max-width:600px;
+          width: 100%;
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      .trophy{
+        background-image:url(images/trophy.svg);
+      }
+      .thumbs{
+        background-image:url(images/thumbs.svg);
+      }
+
+      .acheievementinput{
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 60px;
+        border: 1px solid #CFCBC8;
+        background: #f9f9f8;
+        box-shadow: inset 0 1px 2px #E9E9E8,0 0 0 1000px #fbfbfa inset;
+        border-radius: 6px;
+        font-size: 16px;
+        text-align: center;
+      }
+      .acheievementinput:focus{
+        outline: none;
+        border-color: #ea5f5f;
+        box-shadow: 0 0 10px #fef5f5;
+      }
+
+      body {
+        margin: 0px;
+        line-height: 1.8em;
+        font-family: 'Nunito', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        color: #565656;
+      }
+      .instructions{
+        font-size: 12px;
+        color: #aeaeae;
+        margin-bottom: 20px;
+      }
+      footer{
+        padding-top: 10px;
+        font-size: 12px;
+        color: #aeaeae;
+      }
+      ul{
+        padding: 0px;
+      }
+        .one{
+          display: inline-block;
+          border: 1px solid #ea5f5f;
+          color: #ea5f5f;
+          background: #fef5f5;
+          border-radius: 50%;
+          font-size: 16px;
+          width: 2em;
+          height: 2em;
+          margin-right: 10px;
+          text-align: center;
+        }
+        .oneachieve{
+          color: #ea5f5f;
+          display: block;
+          text-align: center;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .icon-selector {
+          margin-top: 20px;
+
+        }
+        .generate_wrapper{
+          margin-top: 30px;
+        }
+        .icon-selector input{
+          margin:0;padding:0;
+          -webkit-appearance:none;
+          appearance:none;
+
+        }
+        .trophy{background-image:url(images/trophy.svg);}
+        .thumbsup{background-image:url(images/thumbsup.svg);}
+
+        .icon-selector input:active +.effects-icon{opacity: .9;}
+        .icon-selector input:checked +.effects-icon{
+          -webkit-filter: none;
+          filter: none;
+        }
+        .effects-icon{
+          cursor:pointer;
+          background-size:contain;
+          background-repeat:no-repeat;
+          display:inline-block;
+          width:100px;height:70px;
+          -webkit-transition: all 100ms ease-in;
+          transition: all 100ms ease-in;
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+        }
+        .effects-icon:hover{
+          -webkit-filter:  grayscale(.5);
+          filter:  grayscale(.5);
+        }
+        .output-gen{
+          background-color:#f6f6f4;
+        }
+
+    </style>
+    <script language="javascript">
+    function submitTest() {
+      // Get the input
+      var text = document.getElementById("text").value;
+      var icon = document.querySelector("[name='icon']:checked").value;
+      var url = "https://github.com/guigarciam/gui-fewd/achievement/present.html?text="+text+"&icon="+icon;
+      // Build the AJAX request
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url));
+
+      // Setup a response handler for success by updating a label, otherwise log an error
+      xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4) {
+          if(xhr.status==200) {
+            document.getElementById("outputin").textContent = JSON.parse(xhr.responseText).tinyurl;
+
+            document.getElementById("outputin").setAttribute("href", JSON.parse(xhr.responseText).tinyurl);
+          } else {
+          }
+        }
+      }
+      xhr.send();
+      return false;
+    }
+    </script>
+    <body>
+      <div class = "animated fadeInUp container">
+        <div class="logo">
+          Achievement Unlocked!
+        </div>
+        <p class ="instructions">
+          Creating your own achievment is easy, just follow the steps below
+        </p>
+        <form class="achieve" onsubmit="return submitTest();" method="POST" action="#">
+          <ul>
+            <label class="oneachieve" for="name"><span class="one">1</span>Type Your Achievement:</label>
+            <input class="acheievementinput" type="text" name="text" id="text" placeholder="Type in your desired achievement" value="">
+          </ul>
+
+          <label class="oneachieve" for="name"><span class="one">2</span>Choose a Trophy:</label>
+          <div class="icon-selector">
+             <input id="trophy" type="radio" name="icon" value="trophy" />
+             <label class="effects-icon trophy" for="trophy"></label>
+             <input id="thumbsup" type="radio" name="icon" value="thumbsup" />
+             <label class="effects-icon thumbsup"for="thumbsup"></label>
+           </div>
+
+           <div class="generate_wrapper">
+             <input class="btn btn-2 btn-2h" type="submit" value="Generate">
+           </div>
+        </form>
+        <div class="output-gen">
+          Copy this URL: <a id="outputin" href="#"></a>
+        </div>
+      </div>
+      <footer>
+        Made by Guillermo Mont for FEWD37
+      </footer>
+  </body>
+</html>
