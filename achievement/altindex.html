@@ -151,7 +151,7 @@
       xhr.onreadystatechange = function() {
         if(xhr.readyState == 4) {
           if(xhr.status== 200) {
-            document.getElementById("outputin").textContent = JSON.parse(xhr.responseText).tinyurl);
+            document.getElementById("outputin").textContent = JSON.parse(xhr.responseText).tinyurl;
             document.getElementById("outputin").setAttribute("href", JSON.parse(xhr.responseText).tinyurl);
           } else {
           }
