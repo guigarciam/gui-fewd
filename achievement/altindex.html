@@ -147,6 +147,7 @@
       var sourceURL = "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url);
       var proxyURL = "http://proxy.avandamiri.com/get?url=" + encodeURI(sourceURL);
       xhr.open("GET", proxyURL);
+
       xhr.onreadystatechange = function() {
         if(xhr.readyState == 4) {
           if(xhr.status==200) {
@@ -160,6 +161,7 @@
       return false;
     }
     </script>
+
     <body>
       <div class = "animated fadeInUp container">
         <div class="logo">
