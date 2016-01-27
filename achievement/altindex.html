@@ -144,8 +144,9 @@
       var url = "http://guigarciam.github.io/gui-fewd/achievement/present.html?text="+text+"&icon="+icon;
       // Build the AJAX request
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url));
-
+      var sourceURL = "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url);
+      var proxyURL = "http://proxy.avandamiri.com/get?url=" + encodeURI(sourceURL);
+      xhr.open("GET", proxyURL);
       xhr.onreadystatechange = function() {
         if(xhr.readyState == 4) {
           if(xhr.status==200) {
