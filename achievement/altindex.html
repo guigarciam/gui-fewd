@@ -145,7 +145,7 @@
       // Build the AJAX request
       var xhr = new XMLHttpRequest();
       // http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url));
-      var sourceURL = "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url));
+      var sourceURL = "http://urltinyfy.appspot.com/tinyurl?unify=1&url=" + encodeURI(url);
       var proxyURL = "http://proxy.avandamiri.com/get?url=" + encodeURI(sourceURL);
       xhr.open("GET", proxyURL);
 
